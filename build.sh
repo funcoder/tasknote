@@ -19,6 +19,7 @@ mkdir -p "$MACOS" "$RESOURCES"
 
 cp "$EXECUTABLE" "$MACOS/$PRODUCT"
 cp Resources/Info.plist "$CONTENTS/Info.plist"
+cp Resources/AppIcon.icns "$RESOURCES/AppIcon.icns"
 
 echo "Code signing (ad-hoc)..."
 codesign --force --sign - "$APP_BUNDLE"
